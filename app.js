@@ -12,19 +12,23 @@ const users = require('./routes/users');
 
 const port = 3000;
 
-// Middleware
+// CORS Middleware
 app.use(cors());
+
+
+
+// Body Parser Middleware
 app.use(bodyParser.json());
 
 // Routes
 app.use('/users', users);
 
-// Index route
+// Index Route
 app.get('/', (req,res)=>{
   res.send('Invalid endpoint /');
 });
 
-// Start server
+// Start Server
 app.listen(port, ()=>{
   console.log('server started at ' + port)
 });
