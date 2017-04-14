@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+//routes
 const users = require('./routes/users');
 
 const port = 3000;
@@ -15,6 +16,7 @@ const port = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+// routes
 app.use('/users', users);
 
 // Index route
