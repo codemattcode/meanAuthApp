@@ -5,6 +5,8 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 
+mongoose.connect();
+
 const app = express();
 
 // Routes
