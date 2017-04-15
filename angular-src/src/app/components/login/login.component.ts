@@ -27,20 +27,20 @@ export class LoginComponent implements OnInit {
       username: this.username,
       password: this.password
     }
-
+// observable
     this.authService.authenticateUser(user).subscribe(data =>{
       // console.log(data);
       if(data.success){
         this.authService.storeUserData(data.token, data.user);
         this.flashMessage.show('You are now logged in', {
           cssClass: 'alert-success',
-          timeout: 5000 });
+          timeout: 1000 });
         this.router.navigate(['dashboard']);
       }
       else {
         this.flashMessage.show(data.msg, {
           cssClass: 'alert-danger',
-          timeout: 5000 });
+          timeout: 1000 });
         this.router.navigate(['login']);
       }
     });
