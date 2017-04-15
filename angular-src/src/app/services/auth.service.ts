@@ -48,8 +48,8 @@ export class AuthService {
     this.authToken = token;
   }
 
-  loggenIn(){
-    return tokenNotExpired();
+  loggedIn(){
+    return tokenNotExpired('id_token');
   }
 
   logout(){
