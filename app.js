@@ -24,7 +24,13 @@ const app = express();
 // Routes
 const users = require('./routes/users');
 
-const port = 3000;
+// PORTS
+
+// For Development (Uncomment below)
+// const port = 3000;
+
+// For Deployment To Heroku (Comment out during development)
+const port = process.env.PORT || 8080;
 
 // CORS Middleware
 app.use(cors());
