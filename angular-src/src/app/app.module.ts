@@ -31,7 +31,6 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    HomeComponent,
     DashboardComponent,
     ProfileComponent
   ],
