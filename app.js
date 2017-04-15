@@ -49,6 +49,7 @@ app.get('/', (req,res)=>{
   res.send('Invalid endpoint /');
 });
 
+// Redirect all other routes to index.html
 app.get('*', (req,res)=>{
   res.sendFile(path.join(__dirname, 'public/index.html'));
 })
